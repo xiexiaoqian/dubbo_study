@@ -1,0 +1,14 @@
+server:
+  port: 7073
+
+dubbo:
+  application:
+    name: ba-usercenter-provider
+  protocol:
+    name: dubbo   # 常用协议：dubbo、http、webService等
+    port: 20880   # 发布dubbo端口号为20880
+  registry:
+    address: zookeeper://localhost:2181   # dubbo注册中心地址  zookeeper地址
+    client: curator
+  consumer:
+    check: false    # 关闭所有服务的启动时检查
